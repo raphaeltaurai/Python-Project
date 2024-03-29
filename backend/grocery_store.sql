@@ -115,4 +115,15 @@ INSERT INTO orders VALUES
 
 INSERT INTO order_details VALUES
 ('1','1','2','4');
+
+SELECT 
+    products.product_id,
+    products.name,
+    products.uom_id,
+    products.price_per_unit,
+    uom.uom_name
+FROM
+    products
+        INNER JOIN
+    uom ON products.uom_id = uom.uom_id;
  
