@@ -10,7 +10,7 @@ import uom_dao
 app = Flask(__name__)
 
 connection = get_sql_connection()
-
+ 
 @app.route('/getUOM', methods=['GET'])
 def get_uom():
     response = uom_dao.get_uoms(connection)
